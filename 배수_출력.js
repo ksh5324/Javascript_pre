@@ -5,7 +5,8 @@ while(i<=100){
     }
     else if(i%7==0&&i%5!=0){
         document.write("<font color='green'>"+i+"</font>"+"<br>");
-    }else{
+    }else if(i%7==0&&i%5==0){
         document.write("<font color='aqua'>"+i+"</font>"+"<br>");
     }
+    i++;
 }
