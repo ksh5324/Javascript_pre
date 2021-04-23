@@ -1,0 +1,1 @@
+var pop=window.open("window_open.html","pop1","width=300,height=400,left=300,top=10,scrollbars=no,toolbars=no,location=no");
