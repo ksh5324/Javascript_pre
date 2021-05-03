@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <script src="todolist.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    body{
+        background-color: azure;
+    }
+    button{
+            border-radius: 40%;
+            background-color: azure;
+            color: green;
+            border: none;
+            font-size: 40px;
+        }
+        .todo{
+            position: absolute;
+            top: 10%;
+            left: 40%;
+            font-size: 50px;   
+        }
+        h1{
+            position: relative;
+            left: -10%;
+            top: 10%;
+            font-size: 60px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        #todo_1{
+            width: 300px;
+            height: 50px;
+            margin-right: 10px;
+            font-size: 30px;
+        }
+        #click:hover{
+            background-color: gray;
+        }
+        #li{
+            position: relative;
+            left: -10%;
+            list-style-type: none;
+            text-align: center;
+        }
+        li:hover{
+            background-color: gray;
+        }
+        h1:hover{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo">
+        <h1 onclick="location.reload();">To do list</h1>
+        <form action="#">
+        <input type="text" id="todo_1" placeholder="해야할일" required value="">
+        <button id="click" onclick="add();">+</button>
+        <button id="click" onclick="remove();">ㅡ</button>
+        </form>
+        <ul id="li">
+            <li id="li1" onclick="bar(1);"></li>
+            <li id="li2" onclick="bar(2);"></li>
+            <li id="li3" onclick="bar(3);"></li>
+            <li id="li4" onclick="bar(4);"></li>
+        </ul>
+    </div>
+</body>
+</html>

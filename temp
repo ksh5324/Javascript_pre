@@ -1,0 +1,28 @@
+button{
+            border-radius: 40%;
+            background-color: white;
+            color: green;
+            border: none;
+            font-size: 40px;
+        }
+        .todo{
+            position: absolute;
+            top: 10%;
+            left: 40%;
+            
+        }
+        h1{
+            position: relative;
+            left: 20%;
+            top: 10%;
+            font-size: 45px;
+            margin-bottom: 0;
+        }
+        #todo_1{
+            width: 300px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        #click:hover{
+            background-color: gray;
+        }
