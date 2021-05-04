@@ -1,5 +1,6 @@
 var object = new Array();
 var num = 1;
+var a= document.getElementById;
 function add(){
     if(num==1){
         var id = document.getElementById('todo_1').value;
