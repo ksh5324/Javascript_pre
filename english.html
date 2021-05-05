@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent Marker&display=swap');
+        #size{
+            width: 596px;
+            height: 700px;
+            background-image: url('english_poster.jpg');
+            background-size: cover;
+        }
+        #a{
+            position: absolute;
+            font-family: 'Permanent Marker';
+            top: 40px;
+            left: 30px;
+            font-size: 60px;
+            color: darksalmon;
+            text-shadow: 3px 3px 3px darkslategrey;
+            padding: 0;
+        }
+        #a_1{
+            position: absolute;
+            font-family: 'Permanent Marker';
+            top: 40px;
+            left: 32px;
+            font-size: 60px;
+            color: darksalmon;
+            text-shadow: 3px 3px 3px darkslategrey;
+            padding: 0;
+        }
+        #b{
+            position: absolute;
+            top: 500px;
+            left: 130px;
+            font-size: 35px;
+            color:khaki;
+            text-shadow: 3px 3px 3px black;
+            padding: 0;
+        }
+        img{
+            position: relative;
+            top: 100px;
+            float: right;
+            width: 300px;
+            height: 300px;
+        }   
+    </style>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById("canvas_1");
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.moveTo(20,90);
+            ctx.lineTo(150, 50);
+            ctx.lineTo(50, 160);
+            ctx.lineTo(70, 20);
+            ctx.lineTo(150, 140);
+            ctx.lineTo(20,90);
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+    </script>
+</head>
+<body>
+    <div id="size">
+        <img src="web.jpg">
+        <canvas id="canvas_1" width="200px" height="200px"></canvas>
+        <h1 id="a">If you have any<br>questions</h1>
+        <h1 id="a_1">If you have any<br>questions</h1>
+        <h1 id="b">Now you have to use a browser.</h1>
+
+    </div>
+</body>
+</html>

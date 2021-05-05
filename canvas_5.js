@@ -6,5 +6,6 @@ window.onload = function(){
     ctx.lineTo(200,10);
     ctx.arc(200,60,50,-Math.PI/2, 0, false);
     ctx.lineTo(250,160);
-    ctx.stroke();
+    ctx.fillStyle = "#44ff44";
+    ctx.fill();
 }
