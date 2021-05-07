@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>canvas</title>
-    <script src="canvas_ex.js"></script>
     <style>
         #canvas{
             border:1px solid black;
@@ -14,6 +13,25 @@
     <h1>canvas sample 01</h1>
     <hr>
     <canvas id="canvas"></canvas>
-    
+    <button id="del" onclick="del();">fill rect</button>
+    <input type="number" id="a">
+    <input type="number" id="b">
+    <input type="number" id="c">
+    <button id="click" onclick="click();">click</button>
+    <script>
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            var width = document.getElementById("a").value;
+            var height = document.getElementById("b").value;
+            var size = document.getElementById("c").value;
+            function click(){
+                ctx.fillStyle = "black";
+                ctx.fillRect(this.width,this.height,this.size,this.size);
+            };
+            function del(){
+                ctx.fillStyle = "white";
+                ctx.fillRect(0,0,canvas.width,canvas.height);
+            };
+    </script>
 </body>
 </html>
