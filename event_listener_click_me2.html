@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var element = document.getElementById("box");
+            element.addEventListener("click", changeColor, false);
+        };
+        function changeColor(e){
+            e.currentTarget.style.backgroundColor = "red";
+            e.currentTarget.style.height = "100px"
+        }
+    </script>
+</head>
+<body>
+    <div id="box">click me</div>
+</body>
+</html>
