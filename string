@@ -1,0 +1,7 @@
+strlen -> 문자열 길이 함수
+strcmp -> 문자열 비교함수
+strncmp -> 문자열 n개 비교함수
+strcpy ->  문자열 복사 함수
+strcat -> 문자열 이어붙이기
+strchr -> 문자 검색함수
+strstr -> 문자열 검색 함수
