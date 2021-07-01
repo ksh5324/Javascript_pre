@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var t;
+            document.getElementById("open").onclick = function(){
+                t = open("newpage.html", "new page", "width=400, height=300");
+            };
+            document.getElementById("close").onclick = function(){
+                if(t) t.close();
+            };
+        };
+    </script>
+</head>
+<body>
+    <p>
+        <input type="button" value="open" id="open">
+        <input type="button" value="close" id="close">
+    </p>
+</body>
+</html>
