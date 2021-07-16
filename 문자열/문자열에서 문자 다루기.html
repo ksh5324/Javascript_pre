@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #prefecture-list button.hide {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <label> 지역병의 첫 번째 글자를 입력해 주세요. <input type="text" id="search-word-input" maxlength="1"></label>
+    </header>
+    <div id="prefecture-list">
+        <button data-name="속초" data-phonetic="sokcho">속초</button>
+        <button data-name="부산" data-phonetic="busan">부산</button>
+        <button data-name="포항" data-phonetic="pohang">포항</button>
+        <button data-name="상주" data-phonetic="sangju">상주</button>
+        <button data-name="서울" data-phonetic="seoul">서울</button>
+        <button data-name="제주" data-phonetic="jeju">제주</button>
+    </div>
+
+    <script src="./문자열에서 문자 다루기.js"></script>
+</body>
+</html>
