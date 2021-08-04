@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  border-radius: 5%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 200px;
+  background-color: rgb(251, 255, 0);
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 200px;
+}
+.main_main {
+  text-align: center;
+}
+.main_main h1 {
+  font-size: 80px;
+}
+.main_main label input[type="text"] {
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+}
+.main_main label input[type="button"] {
+  height: 50px;
+  width: 50px;
+  background-color: chartreuse;
+}
+
+/* todolist */
+
+.kkkkk {
+  background-color: #ccc;
+}
+.uuuuu {
+  text-decoration: line-through;
+}
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  width: 600px;
+  min-height: 70px;
+  /* border: 1px solid black; */
+}
+ul li {
+  border: 1px solid black;
+  width: 600px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+/* text */
+.text {
+  /* border: 1px solid blue; */
+  width: 550px;
+  height: 50px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.text:focus {
+  outline: none;
+}
+/* button */
+.bu {
+}
+button {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 7px;
+  border: none;
+}
+.b3:active {
+  background-color: #aa0000;
+}
+.b2:active {
+  background-color: #cca500;
+}
+.b1:active {
+  background-color: #005000;
+}
+.b1 {
+  background-color: green;
+}
+.b2 {
+  background-color: orange;
+}
+.b3 {
+  background-color: red;
+}
