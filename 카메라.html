@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="centering">
+        <button onclick="loadAndPlay()">재생</button>
+        <button onclick="stop()">정지</button>
+    
+        <video id="myVideo" width="640" height="480" autoplay></video>
+      </main>
+    <script>
+        let stream;
+        async function loadAndPlay() {
+            const video = document.getElementById('myVideo');
+            stream = await getDeviceStream({
+                video: {width: 640, height: 320},
+                audio: false
+            });
+            video.srcObject = stream;
+        }
+
+        function stop() {
+            const myVideo = document.getElementById('myVideo');
+            const tracks = stream.getTracks();
+
+            tracks.forEach((track) => {
+                track.stop();
+            });
+            video.srcObject = null;
+        }
+
+        function getDeviceStream(option) {
+            if('getUserMedia' in navigator.mediaDevices) {
+                return navigator.mediaDevices.getUserMedia(option);
+            }else{
+                return new Promise(function(resolve, reject) {
+                    navigator.getUserMedia(option, resolve, reject);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
