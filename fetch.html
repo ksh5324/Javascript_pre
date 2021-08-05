@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <button>불러오기</button>
+        <p id="log"></p>
+    </main>
+
+    <script>
+        const btn = document.querySelector('button'); // 버튼 요소 가져오기
+        btn.addEventListener('click', () => {
+            // fetch('abc.txt')
+            // .then((data) => {
+            //     return data.text()
+            // })
+            // .then((text) => {
+            //     const log = document.querySelector('#log');
+            //     log.textContent = text;
+            // });
+            async function load() {
+                const data = await fetch('abc.txt');
+                const text = await data.text();
+                document.querySelector('#log').textContent = text;
+            }
+
+            load();
+        });
+    </script>
+</body>
+</html>

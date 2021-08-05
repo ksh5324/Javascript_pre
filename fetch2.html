@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <button>불러오기</button>
+        <p id="log"></p>
+    </main>
+
+    <script>
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', () => {
+            fetch('abc.json')
+            .then((data) => data.json())
+            .then((obj) => {
+                document.querySelector('#log').textContent = JSON.stringify(obj, null, ' ');
+            })
+        });
+    </script>
+</body>
+</html>
