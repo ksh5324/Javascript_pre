@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="color" id="myColor" value="#ff0000">
+    <p class="log"></p>
+    <script>
+        const element = document.querySelector('#myColor');
+
+        element.addEventListener('change', (event) => {
+            const value = event.target.value;
+            const log = `${value} 색상이 선택되었습니다.`;
+            const logEl = document.querySelector('.log');
+            logEl.innerHTML = log;
+            logEl.style.backgroundColor = value;
+        });
+
+        const value = element.value;
+        console.log(value);
+    </script>
+</body>
+</html>

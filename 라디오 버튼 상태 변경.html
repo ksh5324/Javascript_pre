@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="radioGroup">
+        <label><input type="radio" name="fruit" value="apple" checked>Apple</label>
+        <label><input type="radio" name="fruit" value="orange" checked>Orange</label>
+        <label><input type="radio" name="fruit" value="grape" checked>Grape</label>
+        
+        <label><input type="radio" name="drink" value="coke" checked>Coke</label>
+        <label><input type="radio" name="drink" value="wine" checked>Wine</label>
+        <label><input type="radio" name="drink" value="tea" checked>Tea</label>
+    </form>
+
+    <script>
+        const element = document.querySelector('form#radioGroup');
+
+        element.addEventListener('change', handleChange);
+        function handleChange(event) {
+            const drinkValue = element.drink.value;
+            const fruitValue = element.fruit.value;
+
+            console.log(`${drinkValue}`);
+            console.log(`${fruitValue}`);
+        }
+    </script>
+</body>
+</html>

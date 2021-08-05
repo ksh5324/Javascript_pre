@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="mySelect">
+        <option value="apple">apple</option>
+        <option value="orange">orange</option>
+        <option value="grape">grape</option>
+    </select>
+    <p class="log"></p>
+
+    <script>
+        const element = document.querySelector('#mySelect');
+        
+        element.addEventListener('change', handleChange);
+        
+        function handleChange(event) {
+            const value = element.value;
+            const log = `선택된 값은 ${value} 입니다.`;
+            document.querySelector('.log').innerHTML = log;
+        }
+    </script>
+</body>
+</html>
