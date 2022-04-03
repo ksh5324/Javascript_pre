@@ -155,3 +155,59 @@ const anotherHundred: bigint = 100n;
 
 const firstName = Symbol("name");
 const secondName = Symbol("name");
+
+function padLeft(padding: number | string, input: string): string {
+  throw new Error("Not implemented yet!");
+}
+
+function padLeft2(padding: number | string, input: string) {
+  //   return " ".repeat(padding) + input;
+  if (typeof padding === "number") {
+    return " ".repeat(padding) + input;
+  }
+  return padding + input;
+}
+
+function getUsersOnlineMessage(numUsersOnline: number) {
+  if (numUsersOnline) {
+    return `There are ${numUsersOnline} online now!`;
+  }
+  return "Nobody's here. :(";
+}
+
+type Fish = { swim: () => void };
+type Bird = { fly: () => void };
+
+function move(animal: Fish | Bird) {
+  if ("swim" in animal) {
+    return animal.swim();
+  }
+
+  return animal.fly();
+}
+
+function greeter(fn: (a: string) => void) {
+  fn("Hello, World");
+}
+
+function printToConsole(s: string) {
+  console.log(s);
+}
+
+greeter(printToConsole);
+
+type SomeConstructor = {
+  new (s: string): SomeObject;
+};
+function fn(ctor: SomeConstructor) {
+  return new ctor("hello");
+}
+function firstElement<Type>(arr: Type[]): Type | undefined {
+  return arr[0];
+}
+// s is of type 'string'
+const s = firstElement(["a", "b", "c"]);
+// n is of type 'number'
+const n = firstElement([1, 2, 3]);
+// u is of type undefined
+const u = firstElement([]);
