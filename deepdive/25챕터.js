@@ -92,19 +92,88 @@
 // console.log(derived instanceof Base1);
 // console.log(derived instanceof Base2);
 
-class Base {
-  constructor(a, b) {
-    this.a = a;
-    this.b = b;
+// class Base {
+//   constructor(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   }
+// }
+
+// class Derived extends Base {
+//   constructor(a, b, c) {
+//     super(a, b);
+//     this.c = c;
+//   }
+// }
+
+// const derived = new Derived(1, 2, 3);
+// console.log(derived);
+
+// class Base {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   sayHi() {
+//     return `Hi! ${this.name}`;
+//   }
+// }
+
+// class Derived extends Base {
+//   sayHi() {
+//     return `${super.sayHi()}. how are you doing?`;
+//   }
+// }
+
+// const derived = new Derived("Lee");
+// console.log(derived.sayHi());
+
+// class Rectangle {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   getArea() {
+//     return this.width * this.height;
+//   }
+
+//   toString() {
+//     return `width = ${this.width}, height = ${this.height}`;
+//   }
+// }
+
+// class ColorRectangle extends Rectangle {
+//   constructor(width, height, color) {
+//     super(width, height);
+//     this.color = color;
+//   }
+
+//   toString() {
+//     return super.toString() + `, color = ${this.color}`;
+//   }
+// }
+
+// const colorRectangle = new ColorRectangle(2, 4, "red");
+// console.log(colorRectangle);
+
+// console.log(colorRectangle.getArea());
+
+// console.log(colorRectangle.toString);
+
+class MyArray extends Array {
+  uniq() {
+    return this.filter((v, i, self) => self.indexOf(v) === i);
+  }
+
+  average() {
+    return this.reduce((pre, cur) => pre + cur, 0) / this.length;
   }
 }
 
-class Derived extends Base {
-  constructor(a, b, c) {
-    super(a, b);
-    this.c = c;
-  }
-}
+const myArray = new MyArray(1, 1, 2, 3);
+console.log(myArray);
 
-const derived = new Derived(1, 2, 3);
-console.log(derived);
+console.log(myArray.uniq());
+
+console.log(myArray.average());
