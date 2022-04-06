@@ -230,9 +230,105 @@
 
 // const queue = new Queue([1, 2]);
 
-const arr = [1, 2, 3, 4];
-const result = arr.splice(1, 2, 20, 30);
+// const arr = [1, 2, 3, 4];
+// const result = arr.splice(1, 2, 20, 30);
 
-console.log(result);
+// console.log(result);
 
-console.log(arr);
+// console.log(arr);
+
+// const arr = [1, 2, 3];
+// arr.slice(1);
+
+// const arr = [1, 2, 3];
+// arr.slice(-1);
+// arr.slice(-2);
+
+// const arr = [1, 2, 3];
+// const copy = arr.slice();
+
+// console.log(copy);
+// console.log(copy === arr);
+
+// const todos = [
+//   { id: 1, content: "HTML", completed: false },
+//   { id: 2, content: "CSS", completed: true },
+//   { id: 3, content: "Javascript", completed: false },
+// ];
+// const _todos = todos.slice();
+// console.log(_todos === todos);
+// console.log(_todos[0] === todos[0]);
+
+// const arr = [1, 2, 3];
+// const result = arr.reverse();
+
+// console.log(arr);
+// console.log(result);
+
+// const arr = [1, 2, 3, 4, 5];
+// arr.fill(0);
+// console.log(arr);
+// arr.fill(0, 1);
+// console.log(arr);
+// arr.fill(0, 1, 3);
+// console.log(arr);
+
+// const arr = new Array(3);
+// console.log(arr);
+
+// const result = arr.fill(1);
+
+// const sequences = (length = 0) => Array.from({ length }, (_, i) => i);
+// console.log(sequences(3));
+
+// [1, [2, 3, 4, 5]].flat();
+
+// [1, [2, [3, [4]]]].flat();
+// [1, [2, [3, [4]]]].flat(1);
+
+// [1, [2, [3, [4]]]].flat(2);
+// [1, [2, [3, [4]]]].flat().flat();
+
+// [1, [2, [3, [4]]]].flat(Infinity);
+
+// const fruits = ["Banana", "Orange", "Apple"];
+// fruits.sort();
+// console.log(fruits);
+
+// const points = [40, 100, 1, 5, 2, 25, 10];
+// points.sort((a, b) => a - b);
+// console.log(points);
+
+// points.sort((a, b) => b - a);
+// console.log(points);
+
+// const todos = [
+//   { id: 1, content: "HTML", completed: false },
+//   { id: 2, content: "CSS", completed: true },
+//   { id: 3, content: "Javascript", completed: false },
+// ];
+
+// function compare(key) {
+//   return (a, b) => (a[key] > b[key] ? 1 : a[key] < b[key] ? -1 : 0);
+// }
+// todos.sort(compare("id"));
+// console.log(todos);
+
+// todos.sort(compare("content"));
+// console.log(todos);
+
+// [5, 10, 15].some((item) => item > 10);
+// [5, 10, 15].some((item) => item < 0);
+// ["apple", "banana", "mango"].some((item) => item === "banana");
+// [].some((item) => item > 3);
+
+// [5, 10, 15].every((item) => item > 3);
+// [5, 10, 15].every((item) => item > 10);
+
+// const users = [
+//   { id: 1, name: "Lee" },
+//   { id: 2, name: "Kim" },
+//   { id: 3, name: "Choi" },
+//   { id: 4, name: "Park" },
+// ];
+// users.find((user) => user.id === 2);
